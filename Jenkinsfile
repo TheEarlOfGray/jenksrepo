@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh sudo apt update
+        sh "sudo apt update"
       }
     }
     stage('Test') {
       steps {
-        sh mkdir example
+        sh "mkdir example"
       }
     }
     stage('Deploy') {
       steps {
-        sh cd example
-        sh pwd
+        sh "cd example"
+        sh "pwd"
       }
     }
   }
