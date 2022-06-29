@@ -8,13 +8,14 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh "mkdir somethingelse"
+        sh "mkdir else"
       }
     }
     stage('Deploy') {
       steps {
-        sh "cd somethingelse"
-        sh "pwd"
+        sh "cd else"
+        sh "touch example.txt"
+        sh "ls"
       }
     }
   }
