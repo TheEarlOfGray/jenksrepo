@@ -8,12 +8,12 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh "mkdir example"
+        sh "mkdir somethingelse"
       }
     }
     stage('Deploy') {
       steps {
-        sh "cd example"
+        sh "cd somethingelse"
         sh "pwd"
       }
     }
